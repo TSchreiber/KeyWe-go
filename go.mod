@@ -1,4 +1,4 @@
-module github.com/TSchreiber/keywe
+module github.com/TSchreiber/keywe-go
 
 go 1.16
 
