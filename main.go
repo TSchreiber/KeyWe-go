@@ -97,7 +97,7 @@ func (v *Verifier) Verify(token string) (map[string]interface{},error) {
     if err != nil {
         return nil, err
     }
-    exp := time.UnixMilli(int64(claims["exp"].(float64)))
+    exp := time.Unix(int64(claims["exp"].(float64)), 0)
     if time.Now().After(exp) {
         return nil, errors.New("Token is expired")
     }
